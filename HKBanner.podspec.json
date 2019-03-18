@@ -1,0 +1,27 @@
+{
+    "name": "HKBanner",
+    "version": "0.1.0",
+    "summary": "轮播视图组件，支持远程图片、支持循环滚动",
+    "description": "轮播视图组件，支持远程图片、支持循环滚动",
+    "homepage": "https://github.com/Harley-xk/HKBanner",
+    "license": {
+        "type": "MIT",
+        "file": "LICENSE"
+    },
+    "authors": {
+        "Harley.xk": "harley.gb@foxmail.com"
+    },
+    "source": {
+        "git": "https://github.com/Harley-xk/HKBanner.git",
+        "tag": "0.1.0"
+    },
+    "platforms": {
+        "ios": "9.0"
+    },
+    "source_files": "Sources/HKBanner/**/*",
+    "dependencies": {
+        "SnapKit": [
+        ],
+    }
+    }
+}
