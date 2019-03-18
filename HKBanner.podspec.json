@@ -21,6 +21,6 @@
     "source_files": "Sources/HKBanner/**/*",
     "dependencies": {
         "SnapKit": [
-        ],
+        ]
     }
 }
