@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         var options = BannerOptions(bannerInsets: UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15),
                                        pageInset: UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4),
                                        isCyclic: true)
+//        options.autoScrollDelay = 5
         
         let pageIndicator = DashPageIndicator()        
         options.pageIndicator = pageIndicator

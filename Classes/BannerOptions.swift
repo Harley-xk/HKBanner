@@ -29,6 +29,9 @@ public struct BannerOptions {
     /// 单个 page 相对于自己位置向内的缩紧，通过这个配置可以实现 banner 空白间隔的效果
     public var pageInset = UIEdgeInsets.zero
     
+    /// 自动滚屏间隔，默认 0，不自动滚屏
+    public var autoScrollDelay: TimeInterval = 0
+    
     /// 是否支持循环滚动，默认关闭
     public var isCyclic = false
     
