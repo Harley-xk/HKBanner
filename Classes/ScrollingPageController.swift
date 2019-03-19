@@ -91,6 +91,9 @@ class ScrollingPageController: UIViewController, BannerPageController {
     }
     
     private func getPage(from index: Int) -> Int {
+        if !options.isCyclic {
+            return index
+        }
         var p = index - 2
         if p < 0 {
             p += pageCount
@@ -99,7 +102,7 @@ class ScrollingPageController: UIViewController, BannerPageController {
     }
     
     private func getIndex(from page: Int) -> Int {
-        return page + 2
+        return options.isCyclic ? page + 2 : page
     }
     
     func scrollToIndex(_ index: Int, animated: Bool = true) {
