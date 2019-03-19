@@ -10,12 +10,16 @@ import Foundation
 import UIKit
 import SnapKit
 
+public protocol ImageBannerPageable: BannerPageable {
+    var item: ImageBannerItem { get set }
+}
+
 open class ImageBannerPage: UIViewController, BannerPageable {
     
     public var item: ImageBannerItem!
     public var index: Int = 0
     
-    public var action: ImagePageVendor.Action?
+    public var action: BannerPageAction?
     
     weak var imageView: UIImageView!
     
@@ -37,9 +41,7 @@ open class ImageBannerPage: UIViewController, BannerPageable {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.init(red: CGFloat.random(in: 0.5 ..< 1), green: CGFloat.random(in: 0.5 ..< 1), blue: CGFloat.random(in: 0.5 ..< 1), alpha: 1)
-        
+                
         let tap = UITapGestureRecognizer(target: self, action: #selector(bannerAction(gesture:)))
         view.addGestureRecognizer(tap)
         

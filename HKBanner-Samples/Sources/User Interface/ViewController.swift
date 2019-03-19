@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             $0.height.equalTo(200)
         }
         
-        let imagePageVendor = ImagePageVendor(items: [
+        let imagePageVendor = ImagePageVendor<ImageBannerPage>(items: [
             "http://seopic.699pic.com/photo/40006/5720.jpg_wh1200.jpg",
             "https://img.pconline.com.cn/images/upload/upc/tx/itbbs/1807/03/c0/95475558_1530549524482_mthumb.jpg",
             "http://image.jisuxz.com/desktop/1924/jisuxz_fengjingsheying_201801_09.jpg",

@@ -14,16 +14,16 @@ public protocol ImageBannerItem {
     func setImageForBanner(imageView: UIImageView)
 }
 
+/// 用户透传的 page 事件回调
+public typealias BannerPageAction = (Int) -> ()
+
 /// 默认的图片 banner 分发器
-public class ImagePageVendor: BannerPageVendor {
-    
-    /// 用户透传的 page 事件回调
-    public typealias Action = (Int) -> ()
+open class ImagePageVendor<T: BannerPage>: BannerPageVendor {
     
     /// 透传的图片点击事件
-    private var tapAction: Action?
+    private var tapAction: BannerPageAction?
     
-    public init(items: [ImageBannerItem], tapAction: Action?) {
+    public init(items: [ImageBannerItem], tapAction: BannerPageAction?) {
         self.items = items
         self.pageCount = items.count
         self.tapAction = tapAction

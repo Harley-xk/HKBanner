@@ -15,8 +15,8 @@ public protocol BannerPageable {
     /// 当前页的索引
     var index: Int { get set }
     
-    /// 当 page 重新显示时会调用该方法通知视图控制器刷新页面
-    func refreshPageContent()
+    /// page 事件回调
+    var action: BannerPageAction? { get set }
 }
 
 /// Banner Page 必须是 UIViewController 类型
