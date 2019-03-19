@@ -18,7 +18,42 @@ pod 'HKBanner'
 
 ## Usage
 
-Comming soon. Look at the samples now.
+```swift
+var options = BannerOptions(bannerInsets: UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15),
+                                       pageInset: UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4),
+                                       isCyclic: true)
+// optional, set if needs auto scrolling
+options.autoScrollDelay = 3
+
+// optional, set if needs page indicator
+let pageIndicator = DashPageIndicator()
+options.pageIndicator = pageIndicator
+
+// create banner view with options
+let banner = Banner(options: options)
+view.addSubview(banner)
+banner.snp.makeConstraints {
+    $0.top.equalToSuperview().inset(50)
+    $0.left.right.equalToSuperview()
+    $0.height.equalTo(200)
+}
+
+// set datasource
+let imagePageVendor = ImagePageVendor(items: [
+    "http://www.xxx.com/xxx.jpg",
+    "http://www.xxx.com/xxx.jpg",
+    "http://www.xxx.com/xxx.jpg",
+    ...
+    ]) { (index) in
+        // handle tap action here
+        print("Taped at index: \(index)")
+    }
+
+// display data
+banner.reload(with: imagePageVendor)
+```
+
+Read the sample code for more details!
 
 ## Licence
 
