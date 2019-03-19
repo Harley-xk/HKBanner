@@ -37,26 +37,27 @@ class ScrollingPageController: UIViewController {
         }
     }
     
-    private var cyclicRepreat = 1
-    
     func reload(with pageVendor: BannerPageVendor, beginIndex: Int = 0) {
         self.pageVendor = pageVendor
         
         pageContainers.forEach { $0.removeFromSuperview() }
         pageContainers.removeAll()
         
+        let count = pageVendor.pageCount
+        var indexList: [Int] = (0 ..< count).compactMap{ $0 }
         if options.isCyclic {
-            if pageVendor.pageCount == 1 {
-                cyclicRepreat = 4
-            } else if pageVendor.pageCount == 2 {
-                cyclicRepreat = 3
+            /// 只有一个对象的补齐为5个
+            if count == 1 {
+                indexList += [0, 0, 0, 0]
             } else {
-                cyclicRepreat = 2
+                indexList = [count - 2, count - 1] + indexList + [0, 1]
             }
         }
         
+        var index = 0
+        
         var leading: ConstraintRelatableTarget = scrollView.snp.left
-        for i in 0 ..< pageVendor.pageCount * cyclicRepreat {
+        for page in indexList {
             let container = UIView()
             scrollView.addSubview(container)
             container.snp.makeConstraints {
@@ -66,32 +67,30 @@ class ScrollingPageController: UIViewController {
             leading = container.snp.right
             pageContainers.append(container)
             
-            let index = i % pageVendor.pageCount
-            
-            let page = pageVendor.getPage(at: index)
-            container.addSubview(page.view)
-            page.view.snp.makeConstraints {
+            let pageView = pageVendor.getPage(at: page)
+            container.addSubview(pageView.view)
+            pageView.view.snp.makeConstraints {
                 $0.edges.equalToSuperview().inset(options.pageInset)
             }
-            pages.append(page)
+            pages.append(pageView)
             
             let label = UILabel()
-            label.text = "p: \(index), i: \(i)"
+            label.text = "p: \(page), i: \(index)"
             label.textColor = .white
             label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
-            page.view.addSubview(label)
+            pageView.view.addSubview(label)
             label.snp.makeConstraints { $0.center.equalToSuperview() }
             label.backgroundColor = .black
+            
+            index += 1
         }
         
         pageContainers.last?.snp.makeConstraints {
             $0.right.equalToSuperview()
         }
         
-        if options.isCyclic {
-            DispatchQueue.main.async {
-                self.scrollToIndex(pageVendor.pageCount)
-            }
+        DispatchQueue.main.async {
+            self.scrollTo(0, animated: false)
         }
         
         options.pageIndicator?.numberOfPages = pageVendor.pageCount
@@ -103,9 +102,22 @@ class ScrollingPageController: UIViewController {
         return pageVendor?.pageCount ?? 0
     }
     
+    private func getPage(from index: Int) -> Int {
+        var p = index - 2
+        if p < 0 {
+            p += pageCount
+        }
+        return p
+    }
+    
+    private func getIndex(from page: Int) -> Int {
+        return page + 2
+    }
+    
     func scrollToIndex(_ index: Int, animated: Bool = true) {
         
-        print("Will scroll to page: \(index % pageCount), at index: \(index), animated: \(animated)")
+        let page = getPage(from: index)
+        print("Will scroll to page: \(page), at index: \(index), animated: \(animated)")
 
         var offset = scrollView.contentOffset
         offset.x = scrollView.bounds.width * CGFloat(index)
@@ -115,7 +127,7 @@ class ScrollingPageController: UIViewController {
         scrollView.delegate = self
         
         if !animated {
-            didScroll(to: index % pageCount)
+            didScroll(to: index)
         }
     }
     
@@ -127,7 +139,7 @@ class ScrollingPageController: UIViewController {
             return
         }
         currentIndex = index
-        currentPage = index % pageCount
+        currentPage = getPage(from: index)
         options.pageIndicator?.currentPage = currentPage
         
         beginAutoScroll()
@@ -136,16 +148,12 @@ class ScrollingPageController: UIViewController {
         print("Did scroll to page: \(currentPage), at index: \(index)")
     }
     
-    private func scrollTo(_ page: Int) {
-        var index = currentIndex + (page - currentPage)
-        if index <= 1 {
-            index += pageCount
+    private func scrollTo(_ page: Int, animated: Bool = true) {
+        let index = getIndex(from: page)
+        if animated {
+            scrollToIndex(index - 1, animated: false)
         }
-        if index >= pageCount * cyclicRepreat - 2 {
-            index -= pageCount
-        }
-        scrollToIndex(index - 1, animated: false)
-        scrollToIndex(index)
+        scrollToIndex(index, animated: animated)
     }
     
     private func scrollToNext() {
@@ -196,21 +204,16 @@ extension ScrollingPageController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        let index = scrollView.contentOffset.x / scrollView.bounds.size.width
-        didScroll(to: Int(index))
+        let index = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+        didScroll(to: index)
 
         options.scrollingHandlers.running?(scrollView.contentOffset.x)
         
         if options.isCyclic {
-            if index <= 1 {
-                let beginIndex = pageCount + 1
-                scrollToIndex(beginIndex, animated: false)
-            } else if index >= CGFloat(pageCount * cyclicRepreat - 2) {
-                var page = pageCount - 2
-                while page < 1 {
-                    page += pageCount
-                }
-                scrollToIndex(page, animated: false)
+            if index < 1 {
+                scrollTo(pageCount - 1, animated: false)
+            } else if index >= pageCount + 2 {
+                scrollTo(0, animated: false)
             }
         }
     }
