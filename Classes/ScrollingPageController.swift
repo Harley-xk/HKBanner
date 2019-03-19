@@ -78,7 +78,7 @@ class ScrollingPageController: UIViewController, BannerPageController {
         }
         
         DispatchQueue.main.async {
-            self.scrollTo(0, animated: false)
+            self.scrollTo(beginIndex, animated: false)
         }
         
         options.pageIndicator?.numberOfPages = pageVendor.pageCount

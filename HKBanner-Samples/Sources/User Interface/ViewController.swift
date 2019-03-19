@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         }
         
         banner.reload(with: imagePageVendor)
+//        banner.reload(with: imagePageVendor, beginIndex: 3)
     }
     
     
