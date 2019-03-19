@@ -136,7 +136,7 @@ class ScrollingPageController: UIViewController, BannerPageController {
     
     private func scrollTo(_ page: Int, animated: Bool = true) {
         let index = getIndex(from: page)
-        if animated {
+        if animated && options.isCyclic {
             scrollToIndex(index - 1, animated: false)
         }
         scrollToIndex(index, animated: animated)
