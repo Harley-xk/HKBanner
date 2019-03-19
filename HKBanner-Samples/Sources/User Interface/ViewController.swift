@@ -51,7 +51,6 @@ class ViewController: UIViewController {
                 print("Taped at index: \(index)")
         }
         
-        
         banner.reload(with: imagePageVendor)
     }
     

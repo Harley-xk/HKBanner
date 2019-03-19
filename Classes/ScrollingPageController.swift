@@ -53,9 +53,7 @@ class ScrollingPageController: UIViewController {
                 indexList = [count - 2, count - 1] + indexList + [0, 1]
             }
         }
-        
-        var index = 0
-        
+                
         var leading: ConstraintRelatableTarget = scrollView.snp.left
         for page in indexList {
             let container = UIView()
@@ -73,16 +71,6 @@ class ScrollingPageController: UIViewController {
                 $0.edges.equalToSuperview().inset(options.pageInset)
             }
             pages.append(pageView)
-            
-            let label = UILabel()
-            label.text = "p: \(page), i: \(index)"
-            label.textColor = .white
-            label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
-            pageView.view.addSubview(label)
-            label.snp.makeConstraints { $0.center.equalToSuperview() }
-            label.backgroundColor = .black
-            
-            index += 1
         }
         
         pageContainers.last?.snp.makeConstraints {
@@ -117,7 +105,6 @@ class ScrollingPageController: UIViewController {
     func scrollToIndex(_ index: Int, animated: Bool = true) {
         
         let page = getPage(from: index)
-        print("Will scroll to page: \(page), at index: \(index), animated: \(animated)")
 
         var offset = scrollView.contentOffset
         offset.x = scrollView.bounds.width * CGFloat(index)
@@ -144,8 +131,6 @@ class ScrollingPageController: UIViewController {
         
         beginAutoScroll()
         options.scrollingHandlers.finished?(currentPage)
-        
-        print("Did scroll to page: \(currentPage), at index: \(index)")
     }
     
     private func scrollTo(_ page: Int, animated: Bool = true) {
