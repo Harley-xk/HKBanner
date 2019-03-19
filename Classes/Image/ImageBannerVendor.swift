@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 /// 可以在 banner 上显示的数据协议
 public protocol ImageBannerItem {
     func setImageForBanner(imageView: UIImageView)

@@ -27,7 +27,7 @@ public protocol BannerPageVendor {
     
     /// page 的数量
     var pageCount: Int { get }
-        
+    
     /// BannerView 会调用该方法来获取具体的一个 page, page 的 index 会自动赋值
     func getPage(at index: Int) -> BannerPage
 }

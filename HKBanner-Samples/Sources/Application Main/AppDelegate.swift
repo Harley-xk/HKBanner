@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  HKBanner
+//  HKBanner-Samples
 //
 //  Created by Harley-xk on 2019/3/14.
 //  Copyright © 2019 Harley. All rights reserved.

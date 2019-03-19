@@ -7,14 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F5B96431201AF40B296D3D5 /* Pods_HKBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F365A6FA0C70E44D16714447 /* Pods_HKBanner.framework */; };
-		C310FDF6223F36DB0008A2D8 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310FDF5223F36DB0008A2D8 /* Banner.swift */; };
-		C310FDF8223F37300008A2D8 /* BannerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310FDF7223F37300008A2D8 /* BannerOptions.swift */; };
-		C310FDFA223F38BA0008A2D8 /* PageVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310FDF9223F38BA0008A2D8 /* PageVendor.swift */; };
-		C310FDFC223F39660008A2D8 /* ImageBannerVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310FDFB223F39660008A2D8 /* ImageBannerVendor.swift */; };
-		C310FDFF223F3A2E0008A2D8 /* ImageBannerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310FDFE223F3A2E0008A2D8 /* ImageBannerPage.swift */; };
-		C310FE01223F5DC40008A2D8 /* ScrollingPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310FE00223F5DC40008A2D8 /* ScrollingPageController.swift */; };
-		C310FE03223F86120008A2D8 /* HKBanner.podspec.json in Resources */ = {isa = PBXBuildFile; fileRef = C310FE02223F86120008A2D8 /* HKBanner.podspec.json */; };
+		4EA2AEA9BAD5143C91E27CBC /* Pods_HKBanner_Samples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC030DC0412192A05782686 /* Pods_HKBanner_Samples.framework */; };
 		C37F4B8B223A10BB00C86BBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37F4B8A223A10BB00C86BBB /* AppDelegate.swift */; };
 		C37F4B8D223A10BB00C86BBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37F4B8C223A10BB00C86BBB /* ViewController.swift */; };
 		C37F4B92223A10BC00C86BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37F4B91223A10BC00C86BBB /* Assets.xcassets */; };
@@ -33,15 +26,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		42FA76386ABD6AE04EA722A8 /* Pods-HKBanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKBanner.release.xcconfig"; path = "Target Support Files/Pods-HKBanner/Pods-HKBanner.release.xcconfig"; sourceTree = "<group>"; };
-		C310FDF5223F36DB0008A2D8 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
-		C310FDF7223F37300008A2D8 /* BannerOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerOptions.swift; sourceTree = "<group>"; };
-		C310FDF9223F38BA0008A2D8 /* PageVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVendor.swift; sourceTree = "<group>"; };
-		C310FDFB223F39660008A2D8 /* ImageBannerVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBannerVendor.swift; sourceTree = "<group>"; };
-		C310FDFE223F3A2E0008A2D8 /* ImageBannerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBannerPage.swift; sourceTree = "<group>"; };
-		C310FE00223F5DC40008A2D8 /* ScrollingPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingPageController.swift; sourceTree = "<group>"; };
-		C310FE02223F86120008A2D8 /* HKBanner.podspec.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HKBanner.podspec.json; sourceTree = "<group>"; };
-		C37F4B87223A10BB00C86BBB /* HKBanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKBanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D0A2EC0B5B5180BE96489F6 /* Pods-HKBanner-Samples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKBanner-Samples.release.xcconfig"; path = "Target Support Files/Pods-HKBanner-Samples/Pods-HKBanner-Samples.release.xcconfig"; sourceTree = "<group>"; };
+		ACC030DC0412192A05782686 /* Pods_HKBanner_Samples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HKBanner_Samples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C30B497422407666002EA76E /* HKBanner.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = HKBanner.podspec.json; path = ../HKBanner.podspec.json; sourceTree = "<group>"; };
+		C30B49772240766F002EA76E /* ImageBannerVendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBannerVendor.swift; sourceTree = "<group>"; };
+		C30B49782240766F002EA76E /* ImageBannerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBannerPage.swift; sourceTree = "<group>"; };
+		C30B49792240766F002EA76E /* PageVendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVendor.swift; sourceTree = "<group>"; };
+		C30B497A2240766F002EA76E /* BannerOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerOptions.swift; sourceTree = "<group>"; };
+		C30B497B2240766F002EA76E /* ScrollingPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingPageController.swift; sourceTree = "<group>"; };
+		C30B497C2240766F002EA76E /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		C30B497D2240766F002EA76E /* DashPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashPageIndicator.swift; sourceTree = "<group>"; };
+		C37F4B87223A10BB00C86BBB /* HKBanner-Samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HKBanner-Samples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37F4B8A223A10BB00C86BBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37F4B8C223A10BB00C86BBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C37F4B91223A10BC00C86BBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,8 +53,7 @@
 		C37F4BAF223A44DE00C86BBB /* TaskPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPrinter.swift; sourceTree = "<group>"; };
 		C37F4BB7223A45D400C86BBB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		C37F4BBA223A499500C86BBB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D46E708CA6724B0DEEF62761 /* Pods-HKBanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKBanner.debug.xcconfig"; path = "Target Support Files/Pods-HKBanner/Pods-HKBanner.debug.xcconfig"; sourceTree = "<group>"; };
-		F365A6FA0C70E44D16714447 /* Pods_HKBanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HKBanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4A95323F55D443D900FAAC /* Pods-HKBanner-Samples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKBanner-Samples.debug.xcconfig"; path = "Target Support Files/Pods-HKBanner-Samples/Pods-HKBanner-Samples.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,47 +61,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F5B96431201AF40B296D3D5 /* Pods_HKBanner.framework in Frameworks */,
+				4EA2AEA9BAD5143C91E27CBC /* Pods_HKBanner_Samples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F4A99C73CBE1B2B50853988 /* Pods */ = {
+		982A01B54606C8932AC21BB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D46E708CA6724B0DEEF62761 /* Pods-HKBanner.debug.xcconfig */,
-				42FA76386ABD6AE04EA722A8 /* Pods-HKBanner.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		3D7D9C8244AF8160CC1F213F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F365A6FA0C70E44D16714447 /* Pods_HKBanner.framework */,
+				ACC030DC0412192A05782686 /* Pods_HKBanner_Samples.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C310FDF4223F36CD0008A2D8 /* HKBanner */ = {
+		9DDE054165A617B6954A73C7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C310FDF5223F36DB0008A2D8 /* Banner.swift */,
-				C310FDF7223F37300008A2D8 /* BannerOptions.swift */,
-				C310FDF9223F38BA0008A2D8 /* PageVendor.swift */,
-				C310FE00223F5DC40008A2D8 /* ScrollingPageController.swift */,
-				C310FDFD223F3A080008A2D8 /* Image */,
+				CE4A95323F55D443D900FAAC /* Pods-HKBanner-Samples.debug.xcconfig */,
+				2D0A2EC0B5B5180BE96489F6 /* Pods-HKBanner-Samples.release.xcconfig */,
 			);
-			path = HKBanner;
+			path = Pods;
 			sourceTree = "<group>";
 		};
-		C310FDFD223F3A080008A2D8 /* Image */ = {
+		C30B49752240766F002EA76E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C310FDFB223F39660008A2D8 /* ImageBannerVendor.swift */,
-				C310FDFE223F3A2E0008A2D8 /* ImageBannerPage.swift */,
+				C30B497C2240766F002EA76E /* Banner.swift */,
+				C30B49792240766F002EA76E /* PageVendor.swift */,
+				C30B497A2240766F002EA76E /* BannerOptions.swift */,
+				C30B497B2240766F002EA76E /* ScrollingPageController.swift */,
+				C30B497D2240766F002EA76E /* DashPageIndicator.swift */,
+				C30B49762240766F002EA76E /* Image */,
+			);
+			name = Classes;
+			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		C30B49762240766F002EA76E /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C30B49772240766F002EA76E /* ImageBannerVendor.swift */,
+				C30B49782240766F002EA76E /* ImageBannerPage.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -115,18 +111,19 @@
 		C37F4B7E223A10BB00C86BBB = {
 			isa = PBXGroup;
 			children = (
-				C310FE02223F86120008A2D8 /* HKBanner.podspec.json */,
+				C30B497422407666002EA76E /* HKBanner.podspec.json */,
+				C30B49752240766F002EA76E /* Classes */,
 				C37F4B9F223A12D700C86BBB /* Sources */,
 				C37F4B88223A10BB00C86BBB /* Products */,
-				1F4A99C73CBE1B2B50853988 /* Pods */,
-				3D7D9C8244AF8160CC1F213F /* Frameworks */,
+				9DDE054165A617B6954A73C7 /* Pods */,
+				982A01B54606C8932AC21BB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		C37F4B88223A10BB00C86BBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C37F4B87223A10BB00C86BBB /* HKBanner.app */,
+				C37F4B87223A10BB00C86BBB /* HKBanner-Samples.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,7 +144,6 @@
 			children = (
 				C37F4B9C223A120F00C86BBB /* Application Main */,
 				C37F4BA0223A12E400C86BBB /* User Interface */,
-				C310FDF4223F36CD0008A2D8 /* HKBanner */,
 				C37F4BA2223A12FE00C86BBB /* Models */,
 				C37F4BA1223A12EE00C86BBB /* Networking */,
 			);
@@ -190,24 +186,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C37F4B86223A10BB00C86BBB /* HKBanner */ = {
+		C37F4B86223A10BB00C86BBB /* HKBanner-Samples */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C37F4B99223A10BC00C86BBB /* Build configuration list for PBXNativeTarget "HKBanner" */;
+			buildConfigurationList = C37F4B99223A10BC00C86BBB /* Build configuration list for PBXNativeTarget "HKBanner-Samples" */;
 			buildPhases = (
-				3F079CD6EA74966939D3C94B /* [CP] Check Pods Manifest.lock */,
+				8B26DB27D36BD697C0A20A2B /* [CP] Check Pods Manifest.lock */,
 				C37F4BB9223A460800C86BBB /* R.Swift Generation */,
 				C37F4B83223A10BB00C86BBB /* Sources */,
 				C37F4B84223A10BB00C86BBB /* Frameworks */,
 				C37F4B85223A10BB00C86BBB /* Resources */,
-				EA13D98FB1DA2B8CDCBC6C23 /* [CP] Embed Pods Frameworks */,
+				20BA18A3B61EA671F974C297 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HKBanner;
-			productName = HKBanner;
-			productReference = C37F4B87223A10BB00C86BBB /* HKBanner.app */;
+			name = "HKBanner-Samples";
+			productName = "HKBanner-Samples";
+			productReference = C37F4B87223A10BB00C86BBB /* HKBanner-Samples.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -225,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C37F4B82223A10BB00C86BBB /* Build configuration list for PBXProject "HKBanner" */;
+			buildConfigurationList = C37F4B82223A10BB00C86BBB /* Build configuration list for PBXProject "HKBanner-Samples" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -238,7 +234,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C37F4B86223A10BB00C86BBB /* HKBanner */,
+				C37F4B86223A10BB00C86BBB /* HKBanner-Samples */,
 			);
 		};
 /* End PBXProject section */
@@ -248,7 +244,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C310FE03223F86120008A2D8 /* HKBanner.podspec.json in Resources */,
 				C37F4BA8223A44B800C86BBB /* Main.storyboard in Resources */,
 				C37F4B92223A10BC00C86BBB /* Assets.xcassets in Resources */,
 				C37F4BA7223A44B800C86BBB /* LaunchScreen.storyboard in Resources */,
@@ -258,7 +253,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3F079CD6EA74966939D3C94B /* [CP] Check Pods Manifest.lock */ = {
+		20BA18A3B61EA671F974C297 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HKBanner-Samples/Pods-HKBanner-Samples-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Chrysan/Chrysan.framework",
+				"${BUILT_PRODUCTS_DIR}/Comet/Comet.framework",
+				"${BUILT_PRODUCTS_DIR}/HKBanner/HKBanner.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chrysan.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Comet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HKBanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HKBanner-Samples/Pods-HKBanner-Samples-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B26DB27D36BD697C0A20A2B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,7 +302,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HKBanner-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-HKBanner-Samples-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -300,38 +329,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Sources/Application Main/R.generated.swift\"\n";
 		};
-		EA13D98FB1DA2B8CDCBC6C23 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HKBanner/Pods-HKBanner-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Chrysan/Chrysan.framework",
-				"${BUILT_PRODUCTS_DIR}/Comet/Comet.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chrysan.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Comet.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HKBanner/Pods-HKBanner-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -343,19 +340,13 @@
 				C37F4B8B223A10BB00C86BBB /* AppDelegate.swift in Sources */,
 				C37F4BB0223A44DE00C86BBB /* Server.swift in Sources */,
 				C37F4B9E223A128E00C86BBB /* Configure.swift in Sources */,
-				C310FDF8223F37300008A2D8 /* BannerOptions.swift in Sources */,
 				C37F4BB3223A44DE00C86BBB /* Page.swift in Sources */,
 				C37F4BB6223A44DE00C86BBB /* TaskPrinter.swift in Sources */,
 				C37F4BB1223A44DE00C86BBB /* Response.swift in Sources */,
-				C310FE01223F5DC40008A2D8 /* ScrollingPageController.swift in Sources */,
-				C310FDF6223F36DB0008A2D8 /* Banner.swift in Sources */,
-				C310FDFC223F39660008A2D8 /* ImageBannerVendor.swift in Sources */,
-				C310FDFA223F38BA0008A2D8 /* PageVendor.swift in Sources */,
 				C37F4BB2223A44DE00C86BBB /* ErrorCode.swift in Sources */,
 				C37F4BBB223A499500C86BBB /* User.swift in Sources */,
 				C37F4BB5223A44DE00C86BBB /* Task.swift in Sources */,
 				C37F4BB8223A45D500C86BBB /* R.generated.swift in Sources */,
-				C310FDFF223F3A2E0008A2D8 /* ImageBannerPage.swift in Sources */,
 				C37F4BB4223A44DE00C86BBB /* TaskCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,19 +472,21 @@
 		};
 		C37F4B9A223A10BC00C86BBB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D46E708CA6724B0DEEF62761 /* Pods-HKBanner.debug.xcconfig */;
+			baseConfigurationReference = CE4A95323F55D443D900FAAC /* Pods-HKBanner-Samples.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H28MQNK878;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Application Main/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.--organization-name--.--product-name--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -501,19 +494,21 @@
 		};
 		C37F4B9B223A10BC00C86BBB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42FA76386ABD6AE04EA722A8 /* Pods-HKBanner.release.xcconfig */;
+			baseConfigurationReference = 2D0A2EC0B5B5180BE96489F6 /* Pods-HKBanner-Samples.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H28MQNK878;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Application Main/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.--organization-name--.--product-name--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -522,7 +517,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C37F4B82223A10BB00C86BBB /* Build configuration list for PBXProject "HKBanner" */ = {
+		C37F4B82223A10BB00C86BBB /* Build configuration list for PBXProject "HKBanner-Samples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C37F4B97223A10BC00C86BBB /* Debug */,
@@ -531,7 +526,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C37F4B99223A10BC00C86BBB /* Build configuration list for PBXNativeTarget "HKBanner" */ = {
+		C37F4B99223A10BC00C86BBB /* Build configuration list for PBXNativeTarget "HKBanner-Samples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C37F4B9A223A10BC00C86BBB /* Debug */,

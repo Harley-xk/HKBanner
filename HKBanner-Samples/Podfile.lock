@@ -2,6 +2,8 @@ PODS:
   - Alamofire (4.8.1)
   - Chrysan (1.4.0)
   - Comet (1.5.0)
+  - HKBanner (0.1.0):
+    - SnapKit
   - Kingfisher (5.2.0)
   - R.swift (5.0.2):
     - R.swift.Library (~> 5.0.0)
@@ -12,6 +14,7 @@ DEPENDENCIES:
   - Alamofire
   - Chrysan
   - Comet
+  - HKBanner (from `../`)
   - Kingfisher
   - R.swift
   - SnapKit
@@ -26,15 +29,20 @@ SPEC REPOS:
     - R.swift.Library
     - SnapKit
 
+EXTERNAL SOURCES:
+  HKBanner:
+    :path: "../"
+
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Chrysan: 14c23bd647d5adaef5e3cd796dd5c51d2f7b451f
   Comet: 785333ec44d6a6e8edfa566d24927449122f660c
+  HKBanner: 1367544d94219e7a5b01056e5bf4b7bc166583cd
   Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
   R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 3792c2ebff69822bf2a6ce6346f969c8a14d7b9d
+PODFILE CHECKSUM: f175860829d8ab5cccbf470609b8a09d6b8eb98f
 
 COCOAPODS: 1.6.0.beta.1

@@ -85,6 +85,12 @@ class ScrollingPageController: UIViewController {
                 self.scrollToIndex(pageVendor.pageCount)
             }
         }
+        
+        options.pageIndicator?.numberOfPages = pageVendor.pageCount
+    }
+    
+    private var pageCount: Int {
+        return pageVendor?.pageCount ?? 0
     }
     
     func scrollToIndex(_ index: Int) {
@@ -94,14 +100,20 @@ class ScrollingPageController: UIViewController {
         scrollView.delegate = nil
         scrollView.setContentOffset(offset, animated: false)
         scrollView.delegate = self
+        
+        options.pageIndicator?.currentPage = index % pageCount
     }
 }
 
 extension ScrollingPageController: UIScrollViewDelegate {
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+        let page = index % pageCount
+        options.pageIndicator?.currentPage = page
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        let count = pageVendor?.pageCount ?? 0
         
         let index = scrollView.contentOffset.x / scrollView.bounds.size.width
         
@@ -109,12 +121,12 @@ extension ScrollingPageController: UIScrollViewDelegate {
         
         if options.isCyclic {
             if index <= 1 {
-                let beginIndex = count + 1
+                let beginIndex = pageCount + 1
                 scrollToIndex(beginIndex)
-            } else if index >= CGFloat(count * cyclicRepreat - 2) {
-                var page = count - 2
+            } else if index >= CGFloat(pageCount * cyclicRepreat - 2) {
+                var page = pageCount - 2
                 while page < 1 {
-                    page += count
+                    page += pageCount
                 }
                 scrollToIndex(page)
             }

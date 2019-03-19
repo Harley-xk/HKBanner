@@ -14,8 +14,9 @@ open class Banner: UIImageView {
     public convenience init(options: BannerOptions) {
         self.init()
         self.options = options
+        isUserInteractionEnabled = true
     }
-
+    
     /// 配置项
     open var options: BannerOptions = .default
     
@@ -25,7 +26,7 @@ open class Banner: UIImageView {
         pageController?.reload(with: pageVendor, beginIndex: beginIndex)
     }
     
-    // MARK: - Private    
+    // MARK: - Private
     private var pageController: ScrollingPageController?
     
     private func setupPages() {
@@ -34,6 +35,16 @@ open class Banner: UIImageView {
             addSubview(pageController!.view)
             pageController?.view.snp.makeConstraints {
                 $0.edges.equalToSuperview()
+            }
+        }
+        
+        if let pageIndicator = self.options.pageIndicator, pageIndicator.superview == nil {
+            addSubview(pageIndicator)
+            pageIndicator.snp.makeConstraints {
+                $0.left.equalToSuperview().inset(options.indicatorPosition.leftInset)
+                $0.right.equalToSuperview().inset(options.indicatorPosition.rightInset)
+                $0.bottom.equalToSuperview().inset(options.indicatorPosition.bottomInset)
+                $0.height.equalTo(options.indicatorPosition.height)
             }
         }
     }
