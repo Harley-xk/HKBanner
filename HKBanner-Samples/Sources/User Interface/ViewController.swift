@@ -27,6 +27,8 @@ class ViewController: UIViewController {
                                        pageInset: UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4),
                                        isCyclic: true)
         options.autoScrollDelay = 3
+        options.pageEngineType = .pageController
+        options.pageSpacing = 10
         
         let pageIndicator = DashPageIndicator()        
         options.pageIndicator = pageIndicator

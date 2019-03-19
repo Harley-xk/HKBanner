@@ -18,6 +18,12 @@ public protocol PageIndicatable {
 /// 使系统的页码指示器满足协议
 extension UIPageControl: PageIndicatable {}
 
+/// 分页驱动器
+public enum BannerPageEngineType {
+    case scrollView
+    case pageController
+}
+
 /// Banner 的各种配置项
 public struct BannerOptions {
     /// 默认设置
@@ -27,13 +33,21 @@ public struct BannerOptions {
     public var bannerInsets = UIEdgeInsets.zero
     
     /// 单个 page 相对于自己位置向内的缩紧，通过这个配置可以实现 banner 空白间隔的效果
+    /// - Attention: 该属性对 pageController 模式无效
     public var pageInset = UIEdgeInsets.zero
+    
+    /// 分页间隔，该属性只对 pageController 模式生效
+    public var pageSpacing: CGFloat = 0
     
     /// 自动滚屏间隔，默认 0，不自动滚屏
     public var autoScrollDelay: TimeInterval = 0
     
     /// 是否支持循环滚动，默认关闭
     public var isCyclic = false
+    
+    /// 底层的分页驱动器, 可以选择是使用 UIPageController 驱动或者使用 UIScrollView 驱动
+    /// 默认使用 UIScrollView，可以支持更丰富的样式定制，不过在某些场景下可能存在手势冲突，此时建议切换为 UIPageController
+    public var pageEngineType = BannerPageEngineType.scrollView
     
     /// 页码指示器
     public var pageIndicator: (PageIndicatable & UIView)?

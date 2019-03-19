@@ -53,6 +53,7 @@
 		C37F4BAF223A44DE00C86BBB /* TaskPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPrinter.swift; sourceTree = "<group>"; };
 		C37F4BB7223A45D400C86BBB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		C37F4BBA223A499500C86BBB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C38FA9BF2240CC0A00254479 /* SystemPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemPageController.swift; sourceTree = "<group>"; };
 		CE4A95323F55D443D900FAAC /* Pods-HKBanner-Samples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKBanner-Samples.debug.xcconfig"; path = "Target Support Files/Pods-HKBanner-Samples/Pods-HKBanner-Samples.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +93,7 @@
 				C30B49792240766F002EA76E /* PageVendor.swift */,
 				C30B497A2240766F002EA76E /* BannerOptions.swift */,
 				C30B497B2240766F002EA76E /* ScrollingPageController.swift */,
+				C38FA9BF2240CC0A00254479 /* SystemPageController.swift */,
 				C30B497D2240766F002EA76E /* DashPageIndicator.swift */,
 				C30B49762240766F002EA76E /* Image */,
 			);

@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol BannerPageController {
+    func reload(with pageVendor: BannerPageVendor, beginIndex: Int)
+}
+
 open class Banner: UIImageView {
     
     public convenience init(options: BannerOptions) {
@@ -27,15 +31,11 @@ open class Banner: UIImageView {
     }
     
     // MARK: - Private
-    private var pageController: ScrollingPageController?
+    private var pageController: (BannerPageController & UIViewController)?
     
     private func setupPages() {
         if pageController == nil {
-            pageController = ScrollingPageController(options: options)
-            addSubview(pageController!.view)
-            pageController?.view.snp.makeConstraints {
-                $0.edges.equalToSuperview()
-            }
+            setupPageController()
         }
         
         if let pageIndicator = self.options.pageIndicator, pageIndicator.superview == nil {
@@ -45,6 +45,24 @@ open class Banner: UIImageView {
                 $0.right.equalToSuperview().inset(options.indicatorPosition.rightInset)
                 $0.bottom.equalToSuperview().inset(options.indicatorPosition.bottomInset)
                 $0.height.equalTo(options.indicatorPosition.height)
+            }
+        }
+    }
+    
+    // MARK: - PageControlers
+    
+    func setupPageController() {
+        if options.pageEngineType == .scrollView {
+            pageController = ScrollingPageController(options: options)
+            addSubview(pageController!.view)
+            pageController?.view.snp.makeConstraints {
+                $0.edges.equalToSuperview()
+            }
+        } else {
+            pageController = SystemPageController(options: options)
+            addSubview(pageController!.view)
+            pageController?.view.snp.makeConstraints {
+                $0.edges.equalToSuperview().inset(options.bannerInsets)
             }
         }
     }

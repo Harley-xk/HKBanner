@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class ScrollingPageController: UIViewController {
+class ScrollingPageController: UIViewController, BannerPageController {
     
     convenience init(options: BannerOptions) {
         self.init()
@@ -104,8 +104,6 @@ class ScrollingPageController: UIViewController {
     
     func scrollToIndex(_ index: Int, animated: Bool = true) {
         
-        let page = getPage(from: index)
-
         var offset = scrollView.contentOffset
         offset.x = scrollView.bounds.width * CGFloat(index)
         
