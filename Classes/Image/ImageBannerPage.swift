@@ -11,12 +11,12 @@ import UIKit
 import SnapKit
 
 public protocol ImageBannerPageable: BannerPageable {
-    var item: ImageBannerItem { get set }
+    var item: ImageBannerItem? { get set }
 }
 
-open class ImageBannerPage: UIViewController, BannerPageable {
+open class ImageBannerPage: UIViewController, ImageBannerPageable {
     
-    public var item: ImageBannerItem!
+    public var item: ImageBannerItem?
     public var index: Int = 0
     
     public var action: BannerPageAction?
@@ -52,7 +52,7 @@ open class ImageBannerPage: UIViewController, BannerPageable {
         
         /// 手动触发 loadView 方法加载
         let _ = self.view
-        item.setImageForBanner(imageView: imageView)
+        item?.setImageForBanner(imageView: imageView)
     }
     
     @objc func bannerAction(gesture: UITapGestureRecognizer) {

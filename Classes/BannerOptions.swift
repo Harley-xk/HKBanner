@@ -53,8 +53,8 @@ public struct BannerOptions {
     public var pageIndicator: (PageIndicatable & UIView)?
     
     public struct PageIndicatorPosition {
-        var leftInset, rightInset, bottomInset: CGFloat
-        var height: CGFloat
+        public var leftInset, rightInset, bottomInset: CGFloat
+        public var height: CGFloat
     }
     /// 页码指示器的位置偏移, 默认定位在 banner 底部剧中
     public var indicatorPosition = PageIndicatorPosition(leftInset: 0, rightInset: 0, bottomInset: 5, height: 1)

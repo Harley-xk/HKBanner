@@ -17,8 +17,10 @@ public protocol ImageBannerItem {
 /// 用户透传的 page 事件回调
 public typealias BannerPageAction = (Int) -> ()
 
+public typealias ImagePage = (UIViewController & ImageBannerPageable)
+
 /// 默认的图片 banner 分发器
-open class ImagePageVendor<T: BannerPage>: BannerPageVendor {
+open class ImagePageVendor<T: ImagePage>: BannerPageVendor {
     
     /// 透传的图片点击事件
     private var tapAction: BannerPageAction?
@@ -34,7 +36,7 @@ open class ImagePageVendor<T: BannerPage>: BannerPageVendor {
     public private(set) var pageCount: Int
     
     public func getPage(at index: Int) -> BannerPage {
-        let page = ImageBannerPage()
+        var page = T()
         page.action = tapAction
         page.index = index
         page.item = items[index]
