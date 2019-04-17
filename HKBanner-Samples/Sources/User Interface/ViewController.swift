@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         var options = BannerOptions()
-        options.isCyclic = false
+        options.isCyclic = true
         options.pageInset = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4)
         options.bannerInsets = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
         options.autoScrollDelay = 3
@@ -43,13 +43,12 @@ class ViewController: UIViewController {
         }
         
         let imagePageVendor = ImagePageVendor<ImageBannerPage>(items: [
-            "http://seopic.699pic.com/photo/40006/5720.jpg_wh1200.jpg",
-            "https://img.pconline.com.cn/images/upload/upc/tx/itbbs/1807/03/c0/95475558_1530549524482_mthumb.jpg",
-            "http://image.jisuxz.com/desktop/1924/jisuxz_fengjingsheying_201801_09.jpg",
-            "https://desk-fd.zol-img.com.cn/t_s960x600c5/g5/M00/02/01/ChMkJ1bKxJuIC9j4AA0ddWOyVH8AALHJgNVISwADR2N309.jpg",
+            "http://p1.pstatp.com/origin/2a4100008d310b5fd8a8",
+            "http://pic1.win4000.com/wallpaper/3/56f508af0c640.jpg",
+            "http://up.deskcity.org/pic_source/49/5f/cc/495fcc7d53635b17a341dd682e026b6b.jpg",
             "http://yangqinchuan.com/wp-content/uploads/2017/07/8294_2560x1600.jpg",
-            "http://seopic.699pic.com/photo/40098/2544.jpg_wh1200.jpg",
-            "http://seopic.699pic.com/photo/40007/2702.jpg_wh1200.jpg",
+            "http://img2.1sucai.com/181006/330816-1Q006164G665.jpg",
+            "http://image5.apbianmin8.com/wallpaper/Landscape%20Wallpapers/10157_1280x800.jpg",
             ]) { (index) in
                 print("Taped at index: \(index)")
         }
