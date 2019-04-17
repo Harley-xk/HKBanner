@@ -7,6 +7,8 @@
 
 Swift Banner component, supports remote images and infinite cycling.
 
+<img src="samples.gif" width="350">
+
 ## Install
 
 CocoaPods Supported：
