@@ -29,10 +29,10 @@ public struct BannerOptions {
     /// 默认设置
     public static let `default` = BannerOptions()
     
-    /// 整个 banner 的内容相对于视图向内的锁进
+    /// 整个 banner 的内容相对于视图向内的缩进
     public var bannerInsets = UIEdgeInsets.zero
     
-    /// 单个 page 相对于自己位置向内的缩紧，通过这个配置可以实现 banner 空白间隔的效果
+    /// 单个 page 相对于自己位置向内的缩进，通过这个配置可以实现 banner 空白间隔的效果
     /// - Attention: 该属性对 pageController 模式无效
     public var pageInset = UIEdgeInsets.zero
     

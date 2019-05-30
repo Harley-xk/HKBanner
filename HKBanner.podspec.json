@@ -1,6 +1,6 @@
 {
     "name": "HKBanner",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "summary": "Swift Banner component, supports remote images and infinite cycling.",
     "description": "Swift Banner component, supports remote images and infinite cycling. \n轮播视图组件，支持远程图片、支持循环滚动",
     "homepage": "https://github.com/Harley-xk/HKBanner",
@@ -13,12 +13,12 @@
     },
     "source": {
         "git": "https://github.com/Harley-xk/HKBanner.git",
-        "tag": "1.1.0"
+        "tag": "1.2.0"
     },
     "platforms": {
-        "ios": "9.0"
+        "ios": "10.0"
     },
-    "swift_version": "4.2",
+    "swift_version": "5.0",
     "source_files": "Classes/**/*",
     "dependencies": {
         "SnapKit": [

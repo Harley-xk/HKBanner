@@ -1,14 +1,14 @@
 PODS:
-  - Alamofire (4.8.1)
-  - Chrysan (1.4.0)
-  - Comet (1.5.0)
-  - HKBanner (1.0.1):
+  - Alamofire (4.8.2)
+  - Chrysan (1.5.0)
+  - Comet (1.6.2)
+  - HKBanner (1.1.0):
     - SnapKit
-  - Kingfisher (5.2.0)
-  - R.swift (5.0.2):
+  - Kingfisher (5.5.0)
+  - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
-  - R.swift.Library (5.0.0)
-  - SnapKit (4.2.0)
+  - R.swift.Library (5.0.1)
+  - SnapKit (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -34,15 +34,15 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  Chrysan: 14c23bd647d5adaef5e3cd796dd5c51d2f7b451f
-  Comet: 785333ec44d6a6e8edfa566d24927449122f660c
-  HKBanner: e64922aa3a00bbf09df3429fa387474285fa70f8
-  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
-  R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
-  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Chrysan: 6bf6682adb2db76f7f5c103930a8c6670f54eebe
+  Comet: ec129472bd2b9683c13aefa939703cc3ef0efb14
+  HKBanner: c52b5ceac7a20d137ab02749aa664e8af4a5e85d
+  Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
 
 PODFILE CHECKSUM: f175860829d8ab5cccbf470609b8a09d6b8eb98f
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.6.1

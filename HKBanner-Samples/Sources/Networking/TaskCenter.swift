@@ -53,7 +53,7 @@ public class TaskCenter: SessionManager {
         
         let server = task.targetServer ?? defaultServer
         
-        var headers = task.additionalHeaders
+        let headers = task.additionalHeaders
 //        if task.authenticationNeeded, let token = UserCenter.shared.token?.value {
 //            headers["Authorization"] = "Bearer \(token)"
 //        }
